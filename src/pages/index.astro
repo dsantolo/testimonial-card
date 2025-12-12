@@ -1,16 +1,37 @@
 ---
+import { getImage } from "astro:assets";
+import TestimonialCard from "../components/testimonial-card";
+import personImg from "../../public/profile-thumbnail.png";
 
+import "../styles/global.css";
+
+const optPersonImg = await getImage({ src: personImg, format: "avif" });
+const personData = {
+  name: "Sarah Dole",
+  handle: "@sarahdole",
+  testimonial:
+    "I've been searching for high-quality abstract images for my design projects, and I'm thrilled to have found this platform. The variety and depth of creativity are astounding!",
+};
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <div
+      class="from-gray-start to-gray-end flex h-screen w-screen items-center justify-center bg-linear-to-br"
+    >
+      <TestimonialCard
+        image={optPersonImg}
+        name={personData.name}
+        handle={personData.handle}
+        testimonial={personData.testimonial}
+      />
+    </div>
+  </body>
 </html>
