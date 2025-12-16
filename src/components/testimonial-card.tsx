@@ -1,4 +1,4 @@
-interface TestimonalCardProps {
+interface TestimonialCardProps {
   image: { src: string };
   name: string;
   handle: string;
@@ -9,7 +9,7 @@ export default function TestimonialCard({
   name = "",
   handle = "",
   testimonial = "",
-}: TestimonalCardProps) {
+}: TestimonialCardProps) {
   return (
     <div className="flex h-[233px] w-[340px] flex-col gap-4 rounded-lg bg-white p-6">
       <div className="flex h-[49px] w-[292px] gap-4">
