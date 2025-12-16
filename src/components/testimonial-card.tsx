@@ -19,8 +19,8 @@ export default function TestimonialCard({
           alt={`Photo of ${name}`}
         />
         <div className="flex flex-col">
-          <div className="text-lg font-semibold text-neutral-900">{name}</div>
-          <div className="text-sm text-neutral-600">{handle}</div>
+          <h2 className="text-lg font-semibold text-neutral-900">{name}</h2>
+          <h3 className="text-sm text-neutral-600">{handle}</h3>
         </div>
       </div>
       <div className="text-base text-neutral-600">{testimonial}</div>
